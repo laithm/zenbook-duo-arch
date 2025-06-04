@@ -1,0 +1,9 @@
+ddcui
+ddcui-debug
+neofetch
+pokego-bin
+pokego-bin-debug
+vercel
+vercel-debug
+yay-bin
+yay-bin-debug

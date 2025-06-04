@@ -1,0 +1,1 @@
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", RUN+="/usr/bin/sudo -u laith /home/laith/.local/bin/battery-mode.sh"

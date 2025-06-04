@@ -1,0 +1,16 @@
+# /home/laith/.config/systemd/user/battery-profile.service
+[Unit]
+Description=Auto set power profile on battery
+After=graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c '\
+  if upower -i $(upower -e | grep BAT) | grep -q "state:\s*discharging"; then \
+    powerprofilesctl set power-saver; \
+  else \
+    powerprofilesctl set balanced; \
+  fi'
+
+[Install]
+WantedBy=default.target
